@@ -95,3 +95,5 @@ public class exploreOperations {
 
     }
 }
+
+//checking if changes are detected
