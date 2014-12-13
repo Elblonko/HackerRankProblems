@@ -9,14 +9,50 @@ import java.util.Scanner;
 public class maxSubArray {
 
 
+//    public static int max_subarray(int[] arr){
+//        int current_sum = 0;
+//        int current_index = -1;
+//        int best_sum = 0;
+//        int best_start_index = -1;
+//        int best_end_index = -1;
+//
+//        for (int i = 0; i < arr.length; i++){
+//
+//            int currVal = current_sum + arr[i];
+//
+//            if (currVal > 0){
+//                if (current_sum == 0){
+//                    current_index = i;
+//                }
+//                current_sum = currVal;
+//            }
+//            else{
+//                current_sum = 0;
+//            }
+//
+//            if( current_sum > best_sum){
+//                best_sum = current_sum;
+//                best_start_index = current_index;
+//                best_end_index = i;
+//            }
+//        }
+//
+//        return best_sum;
+//    }
+
+
     public static int maxSubArr(int [] arr){
         int max_here = 0;
         int max_so_far = 0;
+
         for (int i = 0; i < arr.length ; i++){
             max_here = max_here + arr[i];
-            if(max_here < 0){
-                max_here = 0;
+            if( i == 0){
+                max_here = arr[i];
             }
+//            if(max_here < 0){
+//                max_here = 0;
+//            }
             if(max_so_far < max_here){
                 max_so_far = max_here;
             }
@@ -57,6 +93,5 @@ public class maxSubArray {
         }
         System.out.println();
 
-        System.out.println();
     }
 }
